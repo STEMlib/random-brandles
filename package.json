@@ -1,5 +1,5 @@
 {
-  "name": "josh-collinsworth-sveltekit",
+  "name": "random-brandles",
   "version": "0.0.1",
   "scripts": {
     "dev": "vite dev --port 1027",
@@ -11,7 +11,7 @@
     "lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
     "format": "prettier --write --plugin-search-dir=. .",
     "sass": "sass static/global.scss static/global.css --style=compressed",
-    "postbuild": "svelte-sitemap --domain https://joshcollinsworth.com"
+    "postbuild": "svelte-sitemap --domain https://google.com"
   },
   "devDependencies": {
     "@sveltejs/adapter-static": "^1.0.0",

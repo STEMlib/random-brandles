@@ -25,13 +25,13 @@ main:focus {
 }
 
 ::selection {
-	background: var(--yellow);
-	color: var(--highlightColor); /* WebKit/Blink Browsers */
+	background: #82a951;
+	color: #7851a9; /* WebKit/Blink Browsers */
 }
 
 ::-moz-selection {
-	background: var(--yellow);
-	color: var(--highlightColor); /* Gecko Browsers */
+	background: #82a951;
+	color: #7851a9; /* Gecko Browsers */
 }
 
 ::-webkit-scrollbar {
@@ -42,12 +42,12 @@ main:focus {
 ::-webkit-scrollbar,
 ::-webkit-scrollbar-track {
 	/* the "track" of the bar - great for customizing "background" colors */
-	background: var(--paper);
+	background: #917150;
 }
 
 ::-webkit-scrollbar-thumb {
 	/* the actual draggable element, the star of the show! */
-	background: var(--yellow);
+	background:#7851A9;
 }
 
 body {
@@ -59,7 +59,7 @@ body {
 
 html,
 body {
-	scrollbar-color: var(--yellow) var(--paper);
+	scrollbar-color: var(--gold) var(--paper);
 	scrollbar-width: thin;
 
 	&.smooth-scroll {

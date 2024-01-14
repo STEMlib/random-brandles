@@ -3,11 +3,11 @@ $background: #1d1e26;
 pre {
 	font-style: normal;
 	font-weight: normal;
-	background: var(--darkerGray);
+	background: var(--black);
 	background: $background;
 	padding: 1.5em;
 	margin: var(--halfNote) auto;
-	color: var(--white);
+	color: var(--red);
 	font-size: 0.8rem;
 	overflow: auto;
 	line-height: 1.5;
@@ -23,7 +23,7 @@ pre {
 
 .dark {
 	code {
-		background: hsla(var(--darkBlueHSL), 0.6);
+		background: hsla(var(--black), 0.6);
 		border: 0;
 	}
 

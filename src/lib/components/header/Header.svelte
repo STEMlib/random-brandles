@@ -1,13 +1,14 @@
 <script lang="ts">
 	import LogoSVG from '$lib/components/header/LogoSVG.svelte'
-	import Grid from '$lib/components/Grid.svelte'
+	// import Grid from '$lib/components/Grid.svelte'
+	import Waves from '$lib/components/Waves.svelte'
 	import NavMenu from '$lib/components/header/NavMenu.svelte'
 	import DarkModeToggle from '$lib/components/settings/DarkModeToggle.svelte'
 	import ReduceMotionToggle from '../settings/ReduceMotionToggle.svelte'
 	import { isMenuOpen, isScrollingDown } from '$lib/data/store'
 
 	export let path: string
-	
+
 	// I don't love any part of this, but it's necessary to make the "skip to main content" link work properly, so we'll live with it.
 	const focusMain = (e: Event): void => {
 		e.preventDefault()
@@ -16,30 +17,31 @@
 	}
 </script>
 
-
 <div>
 	<header class="header">
-		<a on:click={focusMain} class="skip-to-content-link" href="#main">
-			Skip to main content
-		</a>
+		<a on:click={focusMain} class="skip-to-content-link" href="#main"> Skip to main content </a>
 
 		<a href="/" class="logo">
 			<LogoSVG />
 			<span class="sr">Home</span>
 		</a>
-		
-		<div class="icon-container" class:sticky={$isMenuOpen} class:ghosty={$isScrollingDown && !$isMenuOpen}>
+
+		<div
+			class="icon-container"
+			class:sticky={$isMenuOpen}
+			class:ghosty={$isScrollingDown && !$isMenuOpen}
+		>
 			<ReduceMotionToggle />
 			<DarkModeToggle />
 			<NavMenu {path} />
 		</div>
 	</header>
 
-	<Grid refresh={path} />
+	<Waves />
 
 	<noscript>
 		<style>
-			#dark-mode-toggle, 
+			#dark-mode-toggle,
 			#motion-toggle,
 			#contact-form {
 				display: none;
@@ -52,14 +54,13 @@
 	</noscript>
 </div>
 
-
 <style lang="scss">
 	.logo {
 		width: auto;
 		height: 2rem;
 		display: block;
 
-		@media (min-width: vars.$xxl) and (min-height:vars.$md) {
+		@media (min-width: vars.$xxl) and (min-height: vars.$md) {
 			height: 3rem;
 		}
 	}
@@ -97,13 +98,13 @@
 	}
 
 	.skip-to-content-link {
-		--itemTransition: .15s cubic-bezier(0.86, 0, 0.07, 1);
+		--itemTransition: 0.15s cubic-bezier(0.86, 0, 0.07, 1);
 
 		transition: transform var(--itemTransition), opacity var(--itemTransition);
 		position: absolute;
 		top: -6rem;
 		left: 1rem;
-		padding: .5em;
+		padding: 0.5em;
 		opacity: 0;
 		display: flex;
 		justify-content: center;

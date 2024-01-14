@@ -1,56 +1,44 @@
 <script lang="ts">
-	import Main from '$lib/components/Main.svelte';
+	import Main from '$lib/components/Main.svelte'
+	import Waves from '$lib/components/Waves.svelte'
 </script>
 
 <svelte:head>
-	<title>Josh Collinsworth</title>
-	<meta property="og:title" content="Josh Collinsworth" />
+	<title>Random Brandles</title>
+	<meta property="og:title" content="Brandon Touchet" />
 	<meta
 		data-key="description"
 		property="og:description"
 		name="description"
 		content="Front-end developer, designer, teacher and writer"
 	/>
-	<meta property="og:image" content="https://joshcollinsworth.com/images/site-image.png" />
-	<meta name="twitter:image" content="https://joshcollinsworth.com/images/site-image.png" />
+	<meta
+		property="og:image"
+		content="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=3273&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+	/>
+	<meta
+		name="twitter:image"
+		content="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=3273&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+	/>
 </svelte:head>
 
 <Main>
 	<div class="intro">
 		<div class="intro__headline">
+			<blockquote>
+				<p>
+					We all fear death and question our place in the universe. The artist's job is not to
+					succumb to despair, but to find an antidote for the emptiness of existence.
+				</p>
+				<footer>—Gertrude Stein, <cite>Midnight in Paris</cite></footer>
+			</blockquote>
 			<h2>
-				<strong>Hi, I’m Josh</strong>. I'm a frontend developer, designer, writer, and&nbsp;teacher.
+				This website is my <strong>antidote</strong>
 			</h2>
 
-			<p class="subhead h2">
-				I currently live in the Kansas City area, and work for <a href="https://deno.land">Deno</a> as
-				a frontend engineer.
-			</p>
+			<p>In some ways this site is a reminder...</p>
 
-			<p>
-				I specialize in performant, accessible, user-focused interfaces. I wrote
-				<a href="https://css-tricks.com/a-complete-beginners-guide-to-npm/"
-					><i>a Complete Beginner's Guide to npm</i></a
-				>
-				on <a href="https://css-tricks.com">CSS Tricks</a>. I
-				<a href="/projects">designed and built</a>
-				the word games
-				<a href="https://quina.app">Quina</a> and <a href="https://playhondo.com">Hondo</a>.
-				Occasionally I'll
-				<a href="/about-me#appearances">appear on a podcast</a>, and I
-				<a href="/blog">blog here</a> once in a while.
-			</p>
-
-			<section>
-				<nav>
-					<ul>
-						<li><a href="/about-me">More about me and what I do</a></li>
-						<li><a href="/blog">My blog</a></li>
-						<li><a href="/projects">Some of my projects</a></li>
-						<li><a href="/contact">Get in touch</a></li>
-					</ul>
-				</nav>
-			</section>
+			<p>In other ways this site is a discovery...</p>
 		</div>
 	</div>
 </Main>
@@ -96,8 +84,8 @@
 			max-width: 17em;
 
 			strong {
-				background: var(--yellow);
-				color: var(--darkerGray);
+				background: var(--gold);
+				color: var(--black);
 			}
 
 			&::before {
@@ -120,6 +108,21 @@
 			a {
 				text-decoration: underline;
 			}
+		}
+
+		blockquote {
+			max-width: 38em;
+
+			p {
+				font-size: 1.75em;
+				// color: var(--white);
+			}
+
+			footer {
+				font-size: 1.25em;
+				// color: var(--white);
+			}
+			// font-size: 2.5em;
 		}
 
 		p {

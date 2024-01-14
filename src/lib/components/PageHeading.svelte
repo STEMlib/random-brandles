@@ -10,7 +10,7 @@
 
 	$: if (title) {
 		if (title === '/') {
-			title = `welcome`
+			title = `Comment ça va, tous le monde!`
 		} else if (title[0] === '/') {
 			title = title.slice(1)
 		}
@@ -18,7 +18,7 @@
 		title = title.split('/').join(' / ').replace(/-/g, ' ')
 
 		isWorking = false
-		
+
 		setTimeout(() => {
 			isWorking = true
 			computedTitle = title
@@ -26,15 +26,10 @@
 	}
 </script>
 
-
 <PageTransition refresh={isSinglePost} span={true}>
 	<div class="page-head">
 		{#if !isSinglePost}
-			<div
-				class="heading-wrapper"
-				class:in={isWorking}
-				class:no-motion={$prefersReducedMotion}
-			>
+			<div class="heading-wrapper" class:in={isWorking} class:no-motion={$prefersReducedMotion}>
 				<span class="brace" aria-hidden="true">[</span>
 				<h1>
 					<div class="title-wrap">
@@ -43,7 +38,7 @@
 					</div>
 				</h1>
 				<span class="brace closing-brace" aria-hidden="true">]</span>
-				
+
 				<noscript>
 					<!-- Just here to allow the heading to show when JS is disabled. -->
 					<style>
@@ -57,10 +52,9 @@
 	</div>
 </PageTransition>
 
-
 <style lang="scss">
 	.page-head {
-		--transition: transform .24s cubic-bezier(0.165, 0.84, 0.44, 1);
+		--transition: transform 0.24s cubic-bezier(0.165, 0.84, 0.44, 1);
 
 		margin-bottom: var(--halfNote);
 		display: flex;
@@ -70,7 +64,7 @@
 		overflow: hidden;
 		position: relative;
 		z-index: 0;
-		font-size: 1.1rem;
+		font-size: 1.5rem;
 		min-height: 2.2rem;
 
 		.heading-wrapper {
@@ -80,19 +74,19 @@
 
 			.brace {
 				font-family: var(--headingFont);
-				font-weight: normal;
-				font-size: 1.25em;
-				color: var(--lightGray);
+				font-weight: bold;
+				font-size: 2.5em;
+				color: var(--trueWhite);
 				margin: 0 0.1em 0 0;
 				z-index: 2;
 				position: relative;
 				left: -1px;
 
 				&.closing-brace {
-					color: var(--yellow);
+					color: var(--trueWhite);
 					margin: 0;
 					transition: var(--transition);
-					transform: translateX(calc(-100% + .3em));
+					transform: translateX(calc(-100% + 0.3em));
 					position: absolute;
 					left: 100%;
 					width: 100%;
@@ -116,14 +110,14 @@
 			margin: 0 0.25rem 0 0;
 			padding: 0;
 			width: max-content;
-			font-weight: normal;
+			font-weight: bold;
 			display: flex;
 			align-items: center;
 
 			.title-wrap {
 				position: relative;
 				z-index: 1;
-				background: linear-gradient(90deg, #a7a8aa, #92abb2, #5eca78, #b6ec1f, #ffd100);
+				background: var(--black);
 				-webkit-text-fill-color: transparent;
 				-webkit-background-clip: text;
 				background-clip: text;

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { LayoutData } from './$types'
 	import '$lib/assets/scss/global.scss'
-	
+
 	import throttle from 'just-throttle'
 	import Header from '$lib/components/header/Header.svelte'
 	import Footer from '$lib/components/Footer.svelte'
@@ -70,29 +70,27 @@
 	})
 </script>
 
-
 <svelte:window on:scroll={handleScroll} />
 
 <svelte:head>
-	<meta property="og:site_name" content="Josh Collinsworth" />
+	<meta property="og:site_name" content="Brandon Touchet" />
 	<meta property="og:locale" content="en_US" />
 	<meta name="twitter:card" content="summary_large_image" />
 	{#if !dev}
-		<script defer data-domain="joshcollinsworth.com" src="https://plausible.io/js/plausible.js"></script>
+		<script
+			defer
+			data-domain="stemlib.github.io"
+			src="https://plausible.io/js/plausible.js"
+		></script>
 	{/if}
 </svelte:head>
 
-<div
-	id="app"
-	class:reduce-motion={$prefersReducedMotion}
->
-	<Loader loading={$isLoading}/>
+<div id="app" class:reduce-motion={$prefersReducedMotion}>
+	<Loader loading={$isLoading} />
 
-	<Header {path} /> 
+	<Header {path} />
 
-	<div class="layout"> 
-		<PageHeading title={path} {isSinglePost} />
-
+	<div class="layout">
 		<PageTransition refresh={path}>
 			<slot />
 		</PageTransition>

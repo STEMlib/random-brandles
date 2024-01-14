@@ -4,9 +4,8 @@
 	const currentYear: number = new Date().getFullYear()
 </script>
 
-
 <div class="footer-wrapper">
-	<Grid inverted={true} />
+	<!-- <Grid inverted={true} /> -->
 	<footer class="footer">
 		<div class="footer__links">
 			<h2 class="h4" id="footer-pages">Pages</h2>
@@ -20,7 +19,7 @@
 				</ul>
 			</nav>
 		</div>
-		<div class="footer__links">
+		<!-- <div class="footer__links">
 			<h2 class="h4" id="footer-links">Links</h2>
 			<ul aria-labelledby="footer-links">
 				<li><a href="/api/rss.xml" data-sveltekit-reload>RSS</a></li>
@@ -29,36 +28,38 @@
 				<li><a href="https://codepen.io/collinsworth">CodePen</a></li>
 				<li><a rel="me" href="https://hachyderm.io/@collinsworth">Mastodon</a></li>
 			</ul>
-		</div>
+		</div> -->
 
 		<div class="fine-print">
-			<p>©2015–{ currentYear } Josh Collinsworth.</p>
-
-			<p>This site uses no tracking or cookies, other than privacy-respecting, GDPR-compliant analytics via <a href="https://plausible.io">Plausible</a>.</p>
+			<p>©{currentYear} Brandon Touchet.</p>
 
 			<p>
-				Made with
-				<a rel="external" href="https://kit.svelte.dev/">SvelteKit</a>; hosted&nbsp;on&nbsp;<a rel="external" href="https://netlify.com">Netlify</a>.
+				This site uses no tracking or cookies, other than privacy-respecting, GDPR-compliant
+				analytics via <a href="https://plausible.io">Plausible</a>.
+			</p>
+
+			<p>
+				Forked from
+				<a rel="external" href="https://joshcollinsworth.com/">Josh Collinsworth</a>.
 			</p>
 		</div>
 	</footer>
 </div>
 
-
 <style lang="scss">
 	.footer {
 		width: 100%;
-		background: var(--darkBlue);
+		background: var(--black);
 		color: var(--white);
 		line-height: 1.6em;
 		padding: 2.5rem var(--margin) 2rem;
-		
+
 		@media (min-width: vars.$sm) {
 			display: grid;
 			grid-template-columns: 1fr 1fr 2fr;
 			align-items: stretch;
 		}
-		
+
 		@media (min-width: vars.$sm) {
 			font-size: 0.8rem;
 		}
@@ -113,7 +114,7 @@
 			align-self: center;
 
 			@media (min-width: vars.$sm) {
-			 margin-left: 0;
+				margin-left: 0;
 			}
 
 			p {
