@@ -23,7 +23,7 @@ pre {
 
 .dark {
 	code {
-		background: hsla(var(--black), 0.6);
+		background: hsla(var(--greenHSL), 0.6);
 		border: 0;
 	}
 
@@ -34,7 +34,7 @@ pre {
 
 code {
 	font-size: 0.8em;
-	background: hsla(var(--green), 0.5);
+	background: hsla(var(--greenHSL), 0.5);
 	padding: 0.2em 0.3em 0.2em;
 	border-radius: 2px;
 	border: 1px solid hsla(var(--gold), 0.25);
