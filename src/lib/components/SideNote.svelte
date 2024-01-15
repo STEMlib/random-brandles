@@ -8,13 +8,13 @@
 		margin: var(--halfNote) 0;
 		font-size: 0.8rem;
 		font-style: italic;
-		background: linear-gradient(to right, var(--lighterBlue), var(--lightestBlue));
+		background: linear-gradient(to right, var(--trueWhite), var(--trueWhite), var(--gold));
 		line-height: var(--quarterNote);
 		min-height: 4.5rem;
 		width: calc(100% + var(--margin) + var(--margin));
 		margin-left: calc(var(--margin) * -1);
 		padding: calc(var(--quarterNote) * 1.5) var(--quarterNote);
-		color: var(--ink);
+		color: var(--black);
 		display: grid;
 		grid-template-columns: 1fr;
 		grid-gap: 1em;
@@ -48,12 +48,12 @@
 	}
 
 	:global(.dark .side-note) {
-		background: var(--darkerBlue);
+		background: linear-gradient(to right, var(--green), var(--green), var(--gold));
 	}
 
 	:global(html:not(.light) .side-note) {
 		@media (prefers-color-scheme: dark) {
-			background: var(--darkerBlue);
+			background: linear-gradient(to right, var(--green), var(--green), var(--gold));
 		}
 	}
 
