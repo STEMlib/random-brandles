@@ -16,13 +16,46 @@
 <Main>
 	<div class="compressed-content writing">
 		<img class="profile-pic" src="/images/bio-photo.jpg" alt="My name is Brandon Touchet ..." />
-		<h2>Who I am</h2>
+		<blockquote>
+			<p>
+				We all fear death and question our place in the universe. The artist's job is not to succumb
+				to despair, but to find an antidote for the emptiness of existence.
+			</p>
+			<footer>—Gertrude Stein, <cite>Midnight in Paris</cite></footer>
+		</blockquote>
 
-		<p>I'm not defined by my accomplishments...</p>
+		<p>
+			This website serves as a reminder to my own antidote--<strong
+				>solving Dunbar's Problem.</strong
+			>... but how did we get here?
+		</p>
 
-		<p>But maybe my habits ...</p>
+		<p>My earliets memories are of me grappling with the big existential questions of life:</p>
+		<ul>
+			<li>Who are we?</li>
+			<li>Why are we here?</li>
+			<li>How did we get here?</li>
+			<li>What are we supposed to do?</li>
+		</ul>
 
-		<h2 id="writing">Writing</h2>
+		<p>
+			Trying to asnwer these big questions of life led me to astronomy. Astronomy led me to quantum
+			mechanics. Quantum Mechanics led me to cosmology. Cosmology led me to the electron self-energy
+			paradox. And the electron self-energy paradox led me to Dunbar's Problem.
+		</p>
+
+		<p>
+			Dunbar's Problem is humanity's limitation in trust which dictates the interaction between two
+			people.
+		</p>
+
+		<h2 id="writing">Projects</h2>
+		<p>...<strong>Need to replace this section with projects</strong>...</p>
+		<ul>
+			<li>Undergrad stuff...</li>
+			<li>Grad stuff...</li>
+			<li>Other stuff...</li>
+		</ul>
 		<p class="subhead">Articles written for other publications</p>
 		<hr />
 
@@ -52,6 +85,10 @@
 			margin-bottom: var(--quarterNote);
 		}
 
+		blockquote {
+			color: var(--green);
+		}
+
 		hr {
 			margin: var(--quarterNote) 0 var(--dottedHalfNote);
 		}
@@ -60,6 +97,13 @@
 			font-size: 1.1rem;
 			font-style: italic;
 			margin: 0;
+		}
+
+		p {
+			strong {
+				background: var(--gold);
+				color: var(--black);
+			}
 		}
 
 		.profile-pic {

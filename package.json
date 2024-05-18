@@ -37,6 +37,8 @@
   },
   "type": "module",
   "dependencies": {
+    "@types/d3": "^7.4.3",
+    "d3": "^7.8.5",
     "just-debounce": "^1.1.0",
     "just-throttle": "^4.2.0",
     "rehype-autolink-headings": "^6.1.0",

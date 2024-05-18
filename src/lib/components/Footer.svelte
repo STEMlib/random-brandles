@@ -73,7 +73,7 @@
 
 		a {
 			color: inherit;
-			text-decoration-color: var(--yellow);
+			text-decoration-color: var(--gold);
 		}
 
 		&-wrapper {

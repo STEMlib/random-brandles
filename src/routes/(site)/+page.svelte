@@ -1,6 +1,8 @@
 <script lang="ts">
 	import Main from '$lib/components/Main.svelte'
-	import Waves from '$lib/components/Waves.svelte'
+	// import TagGraph from '$lib/components/tags/TagGraph.svelte'
+	// const folderPath = '$lib/content/posts'
+	// const metadataTags = getMetadataTags(folderPath)
 </script>
 
 <svelte:head>
@@ -10,7 +12,7 @@
 		data-key="description"
 		property="og:description"
 		name="description"
-		content="Front-end developer, designer, teacher and writer"
+		content="physicist, athlete, musician, Cajun"
 	/>
 	<meta
 		property="og:image"
@@ -25,20 +27,7 @@
 <Main>
 	<div class="intro">
 		<div class="intro__headline">
-			<blockquote>
-				<p>
-					We all fear death and question our place in the universe. The artist's job is not to
-					succumb to despair, but to find an antidote for the emptiness of existence.
-				</p>
-				<footer>—Gertrude Stein, <cite>Midnight in Paris</cite></footer>
-			</blockquote>
-			<h2>
-				This website is my <strong>antidote</strong>
-			</h2>
-
-			<p>In some ways this site is a reminder...</p>
-
-			<p>In other ways this site is a discovery...</p>
+			<!-- <TagGraph data={metadataTags} /> -->
 		</div>
 	</div>
 </Main>
@@ -115,14 +104,11 @@
 
 			p {
 				font-size: 1.75em;
-				// color: var(--white);
 			}
 
 			footer {
 				font-size: 1.25em;
-				// color: var(--white);
 			}
-			// font-size: 2.5em;
 		}
 
 		p {

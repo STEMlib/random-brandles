@@ -15,6 +15,9 @@
 	import { dev } from '$app/environment'
 
 	export let data: LayoutData
+	// let popularPosts: Post[]
+	// let allCategories: string[]
+	// $: ({ popularPosts, allCategories } = data)
 
 	let path: string
 	$: ({ path } = data)

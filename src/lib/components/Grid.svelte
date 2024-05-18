@@ -19,7 +19,7 @@
 		'var(--ink)',
 		'var(--lightBlue)',
 		'var(--darkBlue)',
-		'var(--yellow)',
+		'var(--gold)',
 		'var(--orange)'
 	]
 
@@ -36,31 +36,34 @@
 	const setSquareCount = debounce(() => {
 		if (!browser) return
 
-		let newGridWidth = 
-			window.innerWidth
-			/ parseInt(window.getComputedStyle(window.document.body, null).getPropertyValue('font-size'))
-			* 2
-
+		let newGridWidth =
+			(window.innerWidth /
+				parseInt(
+					window.getComputedStyle(window.document.body, null).getPropertyValue('font-size')
+				)) *
+			2
 
 		// Prevents re-renders when only height changes
-		if (gridWidth && gridWidth === newGridWidth) {	 
+		if (gridWidth && gridWidth === newGridWidth) {
 			return
 		}
 
 		gridWidth = newGridWidth
 
-		thisPage == refresh ? thisPage = String(Math.random()) :	thisPage = refresh
+		thisPage == refresh ? (thisPage = String(Math.random())) : (thisPage = refresh)
 
 		if (squareCount) {
 			count = squareCount
 			return
 		}
 
-		count = 
-			Math.floor(
-				(window.innerWidth
-				/ (parseInt(window.getComputedStyle(window.document.body, null).getPropertyValue('font-size')) / 0.65)
-			* 2)
+		count = Math.floor(
+			(window.innerWidth /
+				(parseInt(
+					window.getComputedStyle(window.document.body, null).getPropertyValue('font-size')
+				) /
+					0.65)) *
+				2
 		)
 	}, 300)
 
@@ -76,7 +79,6 @@
 	}
 </script>
 
-
 <svelte:window on:resize={setSquareCount} />
 
 <div class="grid-wrapper">
@@ -88,7 +90,6 @@
 		</div>
 	{/key}
 </div>
-
 
 <style lang="scss">
 	.grid-wrapper {
