@@ -15,23 +15,12 @@
 					<li><a href="/blog">Blog</a></li>
 					<li><a href="/about-me">About me</a></li>
 					<li><a href="/projects">Projects</a></li>
-					<li><a href="/contact">Contact</a></li>
 				</ul>
 			</nav>
 		</div>
-		<!-- <div class="footer__links">
-			<h2 class="h4" id="footer-links">Links</h2>
-			<ul aria-labelledby="footer-links">
-				<li><a href="/api/rss.xml" data-sveltekit-reload>RSS</a></li>
-				<li><a href="https://ko-fi.com/collinsworth">Ko-Fi</a></li>
-				<li><a href="https://github.com/josh-collinsworth" rel="me">GitHub</a></li>
-				<li><a href="https://codepen.io/collinsworth">CodePen</a></li>
-				<li><a rel="me" href="https://hachyderm.io/@collinsworth">Mastodon</a></li>
-			</ul>
-		</div> -->
 
 		<div class="fine-print">
-			<p>©{currentYear} Brandon Touchet.</p>
+			<p>©{currentYear} Random Brandles</p>
 
 			<p>
 				This site uses no tracking or cookies, other than privacy-respecting, GDPR-compliant

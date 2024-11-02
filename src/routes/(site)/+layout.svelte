@@ -14,13 +14,11 @@
 	import { afterNavigate, beforeNavigate, preloadCode } from '$app/navigation'
 	import { dev } from '$app/environment'
 
-	export let data: LayoutData
-	// let popularPosts: Post[]
-	// let allCategories: string[]
-	// $: ({ popularPosts, allCategories } = data)
-
+	let popularPosts = []
+	let allCategories = []
 	let path: string
-	$: ({ path } = data)
+	export let data: LayoutData
+	$: ({ path, popularPosts, allCategories } = data)
 
 	let root: HTMLElement
 

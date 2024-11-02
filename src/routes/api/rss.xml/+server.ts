@@ -24,16 +24,16 @@ export const GET = async () => {
 const render = (posts: Post[]): string => `<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-<title>Josh Collinsworth</title>
-<description>Josh Collinsworth</description>
-<link>https://joshcollinsworth.com</link>
-<atom:link href="https://joshcollinsworth.com/api/rss.xml" rel="self" type="application/rss+xml"/>
+<title>Random Brandles</title>
+<description>Brandon Touchet's art in science</description>
+<link>https://randombrandles.com</link>
+<atom:link href="https://randombrandles.com/api/rss.xml" rel="self" type="application/rss+xml"/>
 ${posts
 	.map(
 		(post) => `<item>
-<guid isPermaLink="true">https://joshcollinsworth.com/blog/${post.slug}</guid>
+<guid isPermaLink="true">https://randombrandles.com/blog/${post.slug}</guid>
 <title>${post.title}</title>
-<link>https://joshcollinsworth.com/blog/${post.slug}</link>
+<link>https://randombrandles.com/blog/${post.slug}</link>
 <description>${post.excerpt}</description>
 <pubDate>${new Date(post.date).toUTCString()}</pubDate>
 </item>`

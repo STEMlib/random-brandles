@@ -39,7 +39,7 @@
 		</ul>
 
 		<p>
-			Trying to asnwer these big questions of life led me to astronomy. Astronomy led me to quantum
+			Trying to answer these big questions of life led me to astronomy. Astronomy led me to quantum
 			mechanics. Quantum Mechanics led me to cosmology. Cosmology led me to the electron self-energy
 			paradox. And the electron self-energy paradox led me to Dunbar's Problem.
 		</p>
@@ -48,34 +48,6 @@
 			Dunbar's Problem is humanity's limitation in trust which dictates the interaction between two
 			people.
 		</p>
-
-		<h2 id="writing">Projects</h2>
-		<p>...<strong>Need to replace this section with projects</strong>...</p>
-		<ul>
-			<li>Undergrad stuff...</li>
-			<li>Grad stuff...</li>
-			<li>Other stuff...</li>
-		</ul>
-		<p class="subhead">Articles written for other publications</p>
-		<hr />
-
-		<ul>
-			{#each EXTERNAL_POSTS as post}
-				<li>
-					<b>
-						{#if post.slug}
-							<a href={post.slug} rel="external">
-								{post.title}
-							</a>
-						{:else}
-							{post.title}
-						{/if}
-					</b>
-					<br />
-					<i>{post.subtitle}</i>
-				</li>
-			{/each}
-		</ul>
 	</div>
 </Main>
 

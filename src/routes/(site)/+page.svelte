@@ -1,8 +1,16 @@
 <script lang="ts">
 	import Main from '$lib/components/Main.svelte'
-	// import TagGraph from '$lib/components/tags/TagGraph.svelte'
-	// const folderPath = '$lib/content/posts'
-	// const metadataTags = getMetadataTags(folderPath)
+	import type { LayoutData } from './$types'
+	import PostSearch from '$lib/components/PostSearch.svelte'
+	import TagList from '$lib/components/tags/TagList.svelte'
+	import Tag from '$lib/components/tags/Tag.svelte'
+
+	import Sidebar from '$lib/components/Sidebar.svelte'
+	let popularPosts = []
+	let allCategories = []
+	let path: string
+	export let data: LayoutData
+	$: ({ path, popularPosts, allCategories } = data)
 </script>
 
 <svelte:head>
@@ -27,7 +35,33 @@
 <Main>
 	<div class="intro">
 		<div class="intro__headline">
-			<!-- <TagGraph data={metadataTags} /> -->
+			<h1>
+				<strong>Random Brandles</strong>.
+			</h1>
+			<p class="subhead h2">A digital library ...</p>
+			<section>
+				<h2>Start Here</h2>
+				<PostSearch />
+				<h3>Categories</h3>
+				<TagList>
+					{#each allCategories as category}
+						<Tag to="/blog/category/{category}">
+							{category}
+						</Tag>
+					{/each}
+				</TagList>
+
+				<h3>Posts</h3>
+				<ul class="sidebar__posts-list">
+					{#each popularPosts as post}
+						<li>
+							<a href="/blog/{post.slug}" data-sveltekit-preload-code>
+								<span>{post.title}</span>
+							</a>
+						</li>
+					{/each}
+				</ul>
+			</section>
 		</div>
 	</div>
 </Main>
@@ -62,6 +96,24 @@
 			display: grid; //TODO: leftover from old design. Probably not needed unless I decide to put stuff in that narrow right column again.
 			grid-template-columns: 48rem 1fr;
 			gap: 0 calc(var(--wholeNote) * 2);
+		}
+
+		h1,
+		.subhead {
+			font-size: 3.5rem;
+			font-size: clamp(1.8rem, calc(1rem + 3vw), 4.5rem);
+			margin-bottom: var(--halfNote);
+			font-weight: normal;
+			max-width: 17em;
+
+			strong {
+				background: var(--gold);
+				color: var(--black);
+			}
+
+			&::before {
+				display: none;
+			}
 		}
 
 		h2,

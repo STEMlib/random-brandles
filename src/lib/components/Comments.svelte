@@ -8,12 +8,12 @@
 
 	const options = {
 		src: 'https://utteranc.es/client.js',
-		repo: 'josh-collinsworth/joco-sveltekit',
+		repo: 'random-brandles',
 		label: 'comments',
 		crossorigin: 'anonymous',
 		theme: siteTheme,
 		async: '',
-		'issue-term': 'pathname',
+		'issue-term': 'pathname'
 	}
 
 	onMount(() => {
@@ -21,7 +21,7 @@
 		setTimeout(() => {
 			const utteranceScript = document.createElement('script')
 			const targetTag = document.getElementById('utterances-comments')
-		
+
 			for (const prop in options) {
 				utteranceScript.setAttribute(prop, options[prop])
 			}
